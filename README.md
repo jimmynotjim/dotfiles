@@ -1,8 +1,7 @@
 # dotfiles
 
-My dotfiles for setting up macOS for photography, design, and development.
+My dotfiles for setting up macOS with a clean install for photography, design, and development.
 
-> Setup macOS with a Clean Install
 > After too many years of tinkering my machine is a bit all over. With ~Mojave~ ~High Sierra~ Monterey I wanted to start fresh
 
 ## 1. Run Software Update
@@ -35,7 +34,7 @@ Unfortunately some apps aren't available through Homebrew, so you need to instal
 
 ## Thanks to all the dotfiles inspiration from:
 
-[jayroh]: https://github.com/jayrow/dotfiles.new
-[gabebw]: https://github.com/gabebw/dotfiles
-[jeffbyrnes]: https://github.com/jeffbyrnes/dotfiles
-[ericclemmons]: https://github.com/ericclemmons/dotfiles
+[jayroh](https://github.com/jayrow/dotfiles.new)
+[gabebw](https://github.com/gabebw/dotfiles)
+[jeffbyrnes](https://github.com/jeffbyrnes/dotfiles)
+[ericclemmons](https://github.com/ericclemmons/dotfiles)
