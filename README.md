@@ -38,3 +38,4 @@ Unfortunately some apps aren't available through Homebrew, so you need to instal
 * [gabebw](https://github.com/gabebw/dotfiles)
 * [jeffbyrnes](https://github.com/jeffbyrnes/dotfiles)
 * [ericclemmons](https://github.com/ericclemmons/dotfiles)
+* [cliss](https://gist.github.com/cliss/74782128b9a35366ecac44a7c4b45752)
