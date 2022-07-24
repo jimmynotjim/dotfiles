@@ -1,0 +1,95 @@
+# Credit where credit is due - thank you @gabebw:
+# https://github.com/gabebw/dotfiles/blob/master/tag-git/gitconfig
+
+[user]
+  email = jimmynotjim@me.com
+  name = Jimmy Wilson
+
+[github]
+  user = jimmynotjim
+
+[core]
+  editor = vim
+  whitespace = trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore
+  autocrlf = false
+
+[push]
+  # https://git-scm.com/docs/git-config#git-config-pushdefault
+  default = simple
+  # Make `git push` push relevant annotated tags when pushing branches out.
+  followTags = true
+
+[merge]
+  # Per @jferris: `ff = only` means Git will never implicitly do a merge
+  # commit, including while doing git pull. If I'm unexpectedly out of sync
+  # when I git pull, I get this message: fatal: Not possible to fast-forward,
+  # aborting.  At that point, I know that I've forgotten to do something in my
+  # normal workflow, and I retrace my steps.
+  ff = only
+
+[diff]
+  # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject instead of
+  # a/b/c/d as prefixes for patches
+  mnemonicprefix = true
+  # Turn on an experimental heuristic that should make the diff easier to read
+  compactionHeuristic = true
+
+[alias]
+  #a = add
+  #ci = commit -v
+  #circle = !hub ci-status
+  #d = diff
+  #l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  #lo = log -1 --pretty='%C(red)%H%nAuthor: %C(green)%an%n%C(magenta)%s%n%b'
+  #ls = branch -a
+  #open = !hub browse
+  #pr = !hub pull-request
+  #s = status --short --branch
+  unstage = reset
+  #wip = !git add . && git commit -m '[ci skip] WIP'
+  # Show the user email for the current repository.
+  whoami = config user.email
+
+  # Typos
+  brnach = branch
+  dif = diff
+  pul = pull
+  pus = push
+  puhs = push
+  rebae = rebase
+  rebasse = rebase
+
+[apply]
+  # Detect whitespace errors when applying a patch.
+  whitespace = fix
+
+[branch]
+  # Show most recently changed branches first.
+  sort = -committerdate
+
+[color]
+  # Use colors in Git commands that are capable of colored output when
+  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+  #ui = auto
+
+[color "branch"]
+  #current = yellow reverse
+  #local = yellow
+  #remote = green
+
+[color "diff"]
+  #meta = yellow bold
+  #frag = magenta bold # line info
+  #old = red # deletions
+  #new = green # additions
+  #whitespace = white reverse
+
+[color "status"]
+  #added = yellow
+  #changed = green
+  #untracked = cyan
+  #branch = magenta
+
+[init]
+  defaultBranch = main

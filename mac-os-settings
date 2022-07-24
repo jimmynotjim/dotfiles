@@ -1,0 +1,78 @@
+#!/usr/bin/env sh
+# vim: tw=0
+
+# Useful tips from: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+
+# Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Automatically illuminate built-in MacBook keyboard in low light
+defaults write com.apple.BezelServices kDim -bool true
+
+# Turn off keyboard illumination when computer is not used for 5 minutes
+defaults write com.apple.BezelServices kDimTime -int 300
+
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Finder: Always open everything in column view
+defaults write com.apple.Finder FXPreferredViewStyle clmv
+
+# Show remaining battery percentage (can't show time in recent macOS versions)
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Show all filename extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Use current directory as default search scope in Finder
+#defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Show Path bar at bottom of Finder window
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show Status bar in Finder (N items, N.NN GB available)
+#defaults write com.apple.finder ShowStatusBar -bool true
+
+# https://www.howtogeek.com/261880/how-to-show-the-expanded-print-and-save-dialogs-in-os-x-by-default/
+# When saving a document, show full Finder to choose where to save it
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# https://www.howtogeek.com/261880/how-to-show-the-expanded-print-and-save-dialogs-in-os-x-by-default/
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# Save screenshots to ~/Desktop/screenshots
+defaults write com.apple.screencapture location ~/Desktop/screenshots
+
+# https://www.defaults-write.com/enable-spring-loaded-dock-items/
+defaults write enable-spring-load-actions-on-all-items -bool true
+
+# Display full POSIX path as Finder window title
+#defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Enable snap-to-grid for desktop icons
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
+# Add a context menu item for showing the Web Inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Make ⌘ + F focus the search input in iTunes
+defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+
+# Do not restore previously-opened windows in Preview
+# https://apple.stackexchange.com/questions/54854/is-there-a-way-to-make-preview-not-open-all-previously-opened-files
+defaults write com.apple.Preview ApplePersistenceIgnoreState YES
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Kill affected applications
+for app in Safari Finder Dock SystemUIServer; do
+  killall "$app" >/dev/null 2>&1;
+done

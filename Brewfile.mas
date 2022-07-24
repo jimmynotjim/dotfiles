@@ -1,0 +1,19 @@
+
+#
+# Mac App Store
+#
+
+mas '1Password7', id: 1333542190
+mas 'Bear', id: 1091189122
+mas 'DaisyDisk', id: 411643860
+mas 'Darkroom', id: 953286746
+mas 'Fantastical', id: 975937182
+mas 'iA Writer', id: 775737590
+mas 'Meeter', id: 1510445899
+mas 'Patterns', id: 429449079
+mas 'Pixelmator', id: 407963104
+mas 'Poolsuite FM', id: 1514817810
+mas 'Shush', id: 496437906
+mas 'Slack', id: 803453959 
+mas 'Spark', id: 1176895641
+

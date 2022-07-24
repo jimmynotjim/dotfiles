@@ -1,0 +1,87 @@
+#
+# Homebrew Cask
+#
+
+
+tap 'homebrew/cask'
+cask_args appdir: '/Applications'
+
+
+#
+# Essentials
+#
+
+#http://www.alfredapp.com/
+#cask 'alfred'
+
+#https://www.dropbox.com/
+#cask 'dropbox'
+
+#http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html
+cask 'superduper'
+
+#https://www.expressvpn.com
+cask 'expressvpn'
+
+
+#
+# Development
+#
+
+#http://imageoptim.com/
+#cask 'imageoptim'
+
+#https://iterm2.com
+cask 'iterm2'
+
+#https://code.visualstudio.com
+cask 'visual-studio-code' 
+
+#http://www.sublimetext.com/3
+#cask 'sublime-text'
+
+
+#
+# Browsers
+#
+
+#https://www.google.com/chrome/downloads/
+cask 'google-chrome'
+
+#https://www.google.com/chrome/canary/
+#cask 'google-chrome-canary'
+
+#http://www.chromium.org/
+#cask 'chromium'
+
+#http://www.mozilla.org/en-US/firefox/new/
+cask 'firefox'
+
+#https://www.microsoft.com/en-us/edge
+#cask 'microsoft-edge'
+
+
+#
+# Others
+#
+
+#http://www.figma.com
+cask 'figma'
+
+#http://www.bohemiancoding.com/sketch/
+#cask 'sketch'
+
+#https://playbeta.pocketcasts.com/
+#cask 'pocket-casts'
+
+#http://stellarium.org/
+#cask 'stellarium'
+
+#http://dropdox.com
+#cask 'dropbox'
+
+#https://www.coconut-flavour.com/coconutbattery/
+#cask 'coconutbattery'
+
+#https://justgetflux.com
+#cask 'flux'

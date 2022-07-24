@@ -1,0 +1,17 @@
+# macOS files
+.DS_Store
+._*
+.Trashes
+Desktop.ini
+Thumbs.db
+
+# JS files
+.next/
+.npmrc
+node_modules/
+
+# Editor files
+.project
+.settings
+*.code-workspace
+
