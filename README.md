@@ -35,6 +35,11 @@ Unfortunately some apps aren't available through Homebrew, so you need to instal
 * [Logi Options+](https://support.logi.com/hc/en-us/articles/4418699283607)
 * [Logi Bolt](https://support.logi.com/hc/en-us/articles/4418089333655)
 
+## 5. Countdown screensaver
+
+I started out using this screensaver to track how many days it had been since my office had closed for Covid, but before they could reopen I changed jobs, so it's a moo point now. Lately I've had it set to the day I transitioned from carpentry to tech as a reminder of how far I've come and how lucky I am.
+
+https://github.com/soffes/Countdown
 
 ## All done, have fun!
 
