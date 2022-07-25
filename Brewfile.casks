@@ -68,6 +68,9 @@ cask 'firefox'
 #http://www.figma.com
 cask 'figma'
 
+#https://rectangleapp.com/pro
+cask 'rectangle-pro'
+
 #http://www.bohemiancoding.com/sketch/
 #cask 'sketch'
 

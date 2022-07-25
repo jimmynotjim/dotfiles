@@ -14,7 +14,13 @@ Make sure everything is up to date.
 
 Visit [GitHub's official guide](https://help.github.com/articles/generating-ssh-keys#platform-mac) for instructions.
 
-## 3. Install dotfiles
+## 3. Grant disk access to terminal
+
+Apple limits terminal access to disk in macOS Mojave +, grant access or some of the scripts will fail. 
+
+`System Preferences > Security & Privacy > Privacy > Full Disk Access`
+
+## 4. Install dotfiles
 
     $ git clone git@github.com:jimmynotjim/dotfiles.git ~/.dotfiles
     $ cd ~/.dotfiles
@@ -39,3 +45,5 @@ Unfortunately some apps aren't available through Homebrew, so you need to instal
 * [jeffbyrnes](https://github.com/jeffbyrnes/dotfiles)
 * [ericclemmons](https://github.com/ericclemmons/dotfiles)
 * [cliss](https://gist.github.com/cliss/74782128b9a35366ecac44a7c4b45752)
+* [mathiasbynens](https://github.com/mathiasbynens/dotfiles)
+* [macos-defaults](https://macos-defaults.com)
