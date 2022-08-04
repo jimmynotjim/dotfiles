@@ -1,0 +1,22 @@
+{
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 12,
+  "editor.formatOnSave": true,
+  "editor.scrollBeyondLastLine": true,
+  "explorer.autoReveal": false,
+  "files.associations": {
+    "*.jsx": "javascript",
+    "*.tsx": "typescript"
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 98,
+  "terminal.external.osxExec": "Hyper.app",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "GitHub Dark Dimmed"
+}

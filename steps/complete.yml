@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: |
+        echo '
+        ----------------------------------------------------------------
+        Follow the remaining instructions for manual setup in the README
+        ----------------------------------------------------------------
+        '
+      description: ""
+      quiet: true
+      stdout: true

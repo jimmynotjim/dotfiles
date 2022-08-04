@@ -1,0 +1,55 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- clean: ["~"]
+
+- shell:
+    - command: |
+        if ! command -v "xcodebuild" > /dev/null; then
+          xcode-select --install && sudo xcode-select --switch /Library/Developer/CommandLineTools
+        else
+          echo "Command Line Tools are already installed"
+        fi
+      description: Installing Command Line Tools
+    - command: |
+        if ! [ -d ~/.oh-my-zsh ]; then
+          sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        else
+          echo "Oh-My-Zsh is already installed"
+        fi
+      description: Installing Oh-My-Zsh
+    - command: |
+        if ! [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+          git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+        else
+          echo "Zsh Autosuggest plugin is already installed"
+        fi
+      description: Installing Zsh Autocomplete plugin
+    - command: |
+        if ! [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
+          git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+        else
+          echo "Zsh Syntax Highlighting plugin is already installed"
+        fi
+      description: Installing Zsh Syntax Highlighting plugin
+
+- create:
+    - ~/Desktop/screenshots
+    - ~/repos/work
+    - ~/repos/personal
+
+- link:
+    ~/.gitconfig: configs/gitconfig
+    ~/.gitignore: configs/gitignore
+    ~/.zshrc: configs/zshrc
+    ~/.ssh/config: configs/ssh_config
+
+- shell:
+    - command: bash -l './macos/install.sh'
+      description: Installing macos system preferences

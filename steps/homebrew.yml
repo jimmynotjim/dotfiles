@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- shell:
+    - command: |
+        if ! command -v "brew" > /dev/null; then
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        else
+          echo "Homebrew is already installed"
+        fi
+      description: Installing Homebrew...
+      stdout: true
+      stderr: true
+
+- brewfile:
+    file: ./homebrew/Brewfile
+    no-upgrade: true
+    stdout: true
+    stderr: true
+    include: ["tap", "brew", "cask", "mas"]

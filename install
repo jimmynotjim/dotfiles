@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+set -e
+
+CONFIG="install.conf.yaml"
+DOTBOT_DIR="dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+run_dotbot () {
+  local config
+  config="$1"
+
+  "$BASEDIR/$DOTBOT_DIR/$DOTBOT_BIN" \
+    -d "$BASEDIR" \
+    --plugin-dir dotbot-brewfile \
+    -c "$config" $ARGS
+}
+
+run_dotbot 'steps/macos.yml' || true
+run_dotbot 'steps/homebrew.yml' || true
+run_dotbot 'steps/vscode.yml' || true
+run_dotbot 'steps/javascript.yml' || true
+run_dotbot 'steps/complete.yml' || true

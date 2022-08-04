@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- link:
+    "~/Library/Application Support/Code/User/settings.json":
+      if: "[ `uname` = Darwin ]"
+      path: vscode/settings.json
+
+- shell:
+    - command: bash -l './vscode/install.sh'
+      description: Installing vscode extensions

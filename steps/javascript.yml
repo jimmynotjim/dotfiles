@@ -1,0 +1,23 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- link:
+    ~/.eslintrc: configs/eslintrc
+
+- shell:
+    - command: volta install node
+      description: Installing Node
+    - command: volta install yarn
+      description: Installing Yarn
+    - command: npm adduser
+      description: Adding NPM User
+    - command: yarn global add prettier
+      description: Installing Prettier
+    - command: yarn global add typescript
+      description: Installing Typescript
