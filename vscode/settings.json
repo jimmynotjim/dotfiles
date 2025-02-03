@@ -16,7 +16,7 @@
   },
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 98,
-  "terminal.external.osxExec": "Hyper.app",
+  "terminal.external.osxExec": "iTerm.app",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "GitHub Dark Dimmed"
 }

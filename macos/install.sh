@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 # vim: tw=0
 
-# Useful tips from: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# Useful tips from: https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3

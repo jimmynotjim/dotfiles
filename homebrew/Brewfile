@@ -8,22 +8,24 @@
 #
 
 brew 'git'
-#brew 'git-extras'
-#brew 'gh'
+brew 'git-extras'
+brew 'gh'
+## I use volta personally but we use asdf at work
 brew 'volta'
+#brew 'asdf'
 
 
 #
 # Utilities
 #
 
-#brew 'imagemagick'
+brew 'imagemagick'
 #brew 'jpeg'
+
 
 #
 # Homebrew Cask
 #
-
 
 tap 'homebrew/cask'
 cask_args appdir: '/Applications'
@@ -32,12 +34,6 @@ cask_args appdir: '/Applications'
 #
 # Essentials
 #
-
-#http://www.alfredapp.com/
-#cask 'alfred'
-
-#https://www.dropbox.com/
-#cask 'dropbox'
 
 #http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html
 cask 'superduper'
@@ -51,16 +47,13 @@ cask 'expressvpn'
 #
 
 #http://imageoptim.com/
-#cask 'imageoptim'
+cask 'imageoptim'
 
 #https://iterm2.com
 cask 'iterm2'
 
 #https://code.visualstudio.com
 cask 'visual-studio-code' 
-
-#http://www.sublimetext.com/3
-#cask 'sublime-text'
 
 
 #
@@ -71,7 +64,7 @@ cask 'visual-studio-code'
 cask 'google-chrome'
 
 #https://www.google.com/chrome/canary/
-#cask 'google-chrome-canary'
+cask 'google-chrome-canary'
 
 #http://www.chromium.org/
 #cask 'chromium'
@@ -80,7 +73,7 @@ cask 'google-chrome'
 cask 'firefox'
 
 #https://www.microsoft.com/en-us/edge
-#cask 'microsoft-edge'
+cask 'microsoft-edge'
 
 
 #
@@ -93,23 +86,14 @@ cask 'figma'
 #https://rectangleapp.com/pro
 cask 'rectangle-pro'
 
-#http://www.bohemiancoding.com/sketch/
-#cask 'sketch'
-
 #https://playbeta.pocketcasts.com/
 #cask 'pocket-casts'
 
 #http://stellarium.org/
 #cask 'stellarium'
 
-#http://dropdox.com
-#cask 'dropbox'
-
 #https://www.coconut-flavour.com/coconutbattery/
 #cask 'coconutbattery'
-
-#https://justgetflux.com
-#cask 'flux'
 
 
 #
@@ -122,7 +106,6 @@ mas 'DaisyDisk', id: 411643860
 mas 'Darkroom', id: 953286746
 mas 'Fantastical', id: 975937182
 mas 'iA Writer', id: 775737590
-mas 'Meeter', id: 1510445899
 mas 'Patterns', id: 429449079
 mas 'Pixelmator', id: 407963104
 mas 'Poolsuite FM', id: 1514817810

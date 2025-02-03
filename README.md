@@ -4,7 +4,7 @@ _There are many ~~rifles~~ dotfiles but this one is mine!_
 
 My personal dotfiles for setting up macOS with a clean install for photography, design, and development.
 
-> After too many years of tinkering, my machine is a bit all over. With ~~Mojave~~ ~~High Sierra~~ Monterey I wanted a fresh start - Me, every few years
+> After too many years of tinkering, my machine is a bit all over. With ~~Mojave~~ ~~High Sierra~~ ~~Monterey~~ Sequoia I wanted a fresh start - Me, every few years
 
 ## 1. Run Software Update
 
