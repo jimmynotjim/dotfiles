@@ -38,6 +38,13 @@
           echo "Zsh Syntax Highlighting plugin is already installed"
         fi
       description: Installing Zsh Syntax Highlighting plugin
+    - command: |
+        if ! [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-yarn-completions ]; then
+          git clone https://github.com/chrisands/zsh-yarn-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
+        else
+          echo "Zsh Yarn Completions plugin is already installed"
+        fi
+      description: Installing Zsh Yarn Completions plugin
 
 - create:
     - ~/Desktop/screenshots
