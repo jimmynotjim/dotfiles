@@ -1,0 +1,11 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- link:
+    ~/Library/Application Support/iTerm2/DynamicProfiles/my-profile.json: configs/iterm

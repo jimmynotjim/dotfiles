@@ -10,6 +10,7 @@
 - link:
     ~/.eslintrc: configs/eslintrc
 
+# Personal only
 - shell:
     - command: volta install node
       description: Installing Node
@@ -21,3 +22,14 @@
       description: Installing Prettier
     - command: yarn global add typescript
       description: Installing Typescript
+
+# Work only
+# - shell: 
+#     - command: asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+#       description: Installing ASDF NodeJS plugin
+
+#     - command: asdf install nodejs latest:18
+#       description: Install Node 18 via ASDF
+
+#     - command: asdf global nodejs latest:18
+#       description: Set Node global to v18 via ASDF

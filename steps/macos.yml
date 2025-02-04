@@ -40,7 +40,7 @@
       description: Installing Zsh Syntax Highlighting plugin
     - command: |
         if ! [ -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-yarn-completions ]; then
-          git clone https://github.com/chrisands/zsh-yarn-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom/plugins/zsh-yarn-completions
+          git clone https://github.com/chrisands/zsh-yarn-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-yarn-completions
         else
           echo "Zsh Yarn Completions plugin is already installed"
         fi
@@ -55,6 +55,7 @@
     ~/.gitconfig: configs/gitconfig
     ~/.gitignore: configs/gitignore
     ~/.zshrc: configs/zshrc
+    ~/.zprofile: configs/zprofile
     ~/.ssh/config: configs/ssh_config
 
 - shell:

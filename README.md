@@ -35,11 +35,10 @@ Unfortunately some apps aren't available through Homebrew, so you need to instal
 - [Adobe Suite](http://www.adobe.com/products/creativecloud.html) for image editing
 - [Hex Color Picker](http://wafflesoftware.net/hexpicker/) adds hex values to system picker
 - [Logi Options+](https://support.logi.com/hc/en-us/articles/4418699283607)
-- [Logi Bolt](https://support.logi.com/hc/en-us/articles/4418089333655)
 
-## 5. iTerm 2 theme
+## 5. iTerm 2 Settings
 
-I prefer to match the Github Dark Dimmed theme I already use in VSCode, luckily it's [available for iTerm 2](https://github.com/cdalvaro/github-vscode-theme-iterm).
+The my personal iTerm Profile is installed during setup, but needs to be set as the default profile in iTerm > Settings > Profiles. I prefer to match the Github Dark Dimmed theme I already use in VSCode, luckily it's [available for iTerm 2](https://github.com/cdalvaro/github-vscode-theme-iterm).
 
 ## 6. Countdown screensaver
 
@@ -52,7 +51,7 @@ https://github.com/soffes/Countdown
 ## Thanks to all the dotfiles inspiration from:
 
 - [sobolevn](https://github.com/sobolevn/dotfiles)
-- [jayroh](https://github.com/jayrow/dotfiles.new)
+- [jayroh](https://github.com/jayroh/dotfiles.new)
 - [gabebw](https://github.com/gabebw/dotfiles)
 - [jeffbyrnes](https://github.com/jeffbyrnes/dotfiles)
 - [ericclemmons](https://github.com/ericclemmons/dotfiles)

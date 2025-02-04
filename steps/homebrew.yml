@@ -17,6 +17,7 @@
       description: Installing Homebrew...
       stdout: true
       stderr: true
+    - command: eval '$(/opt/homebrew/bin/brew shellenv)'
 
 - brewfile:
     file: ./homebrew/Brewfile

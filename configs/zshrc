@@ -103,6 +103,10 @@ alias gdstat="git diff --stat"
 
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # Load Volta (before setup scripts) in case it's the first time installing them
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Work only
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh

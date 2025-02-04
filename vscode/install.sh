@@ -1,5 +1,6 @@
 # code --list-extensions
 
+code --install-extension austenc.tailwind-docs
 code --install-extension bradlc.vscode-tailwindcss
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension eamodio.gitlens
@@ -17,7 +18,6 @@ code --install-extension unifiedjs.vscode-mdx
 
 # Work only extensions
 
-# code --install-extension austenc.tailwind-docs
-# code --install-extension biomejs.biome
-# code --install-extension github.copilot
-# code --install-extension github.copilot-chat
+#code --install-extension biomejs.biome
+#code --install-extension github.copilot
+#code --install-extension github.copilot-chat

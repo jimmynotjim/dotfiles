@@ -10,16 +10,24 @@
 brew 'git'
 brew 'git-extras'
 brew 'gh'
-## I use volta personally but we use asdf at work
 brew 'volta'
+## Work only
 #brew 'asdf'
-
+#brew gpg
+#brew gawk
+#brew pnpm
+#brew mkcert
+#brew nss
+#brew postgresql@13
+#brew redis
+#brew libxmlsec1
+#brew fabric
 
 #
 # Utilities
 #
 
-brew 'imagemagick'
+#brew 'imagemagick'
 #brew 'jpeg'
 
 
@@ -27,7 +35,6 @@ brew 'imagemagick'
 # Homebrew Cask
 #
 
-tap 'homebrew/cask'
 cask_args appdir: '/Applications'
 
 
@@ -53,7 +60,7 @@ cask 'imageoptim'
 cask 'iterm2'
 
 #https://code.visualstudio.com
-cask 'visual-studio-code' 
+cask 'visual-studio-code'
 
 
 #
@@ -64,7 +71,7 @@ cask 'visual-studio-code'
 cask 'google-chrome'
 
 #https://www.google.com/chrome/canary/
-cask 'google-chrome-canary'
+cask 'google-chrome@canary'
 
 #http://www.chromium.org/
 #cask 'chromium'
@@ -87,13 +94,13 @@ cask 'figma'
 cask 'rectangle-pro'
 
 #https://playbeta.pocketcasts.com/
-#cask 'pocket-casts'
+cask 'pocket-casts'
 
 #http://stellarium.org/
-#cask 'stellarium'
+cask 'stellarium'
 
 #https://www.coconut-flavour.com/coconutbattery/
-#cask 'coconutbattery'
+cask 'coconutbattery'
 
 
 #
@@ -110,5 +117,5 @@ mas 'Patterns', id: 429449079
 mas 'Pixelmator', id: 407963104
 mas 'Poolsuite FM', id: 1514817810
 mas 'Shush', id: 496437906
-mas 'Slack', id: 803453959 
+mas 'Slack', id: 803453959
 mas 'Spark', id: 1176895641
