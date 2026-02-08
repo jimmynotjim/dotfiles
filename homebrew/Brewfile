@@ -10,7 +10,7 @@
 brew 'git'
 brew 'git-extras'
 brew 'gh'
-brew 'volta'
+brew 'mise'
 ## Work only
 #brew 'asdf'
 #brew gpg

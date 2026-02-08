@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node volta yarn zsh-autosuggestions zsh-syntax-highlighting zsh-yarn-completions)
+plugins=(git node yarn zsh-autosuggestions zsh-syntax-highlighting zsh-yarn-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,9 +104,8 @@ alias gdstat="git diff --stat"
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# Load Volta (before setup scripts) in case it's the first time installing them
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# Load mise (before setup scripts) in case it's the first time installing them
+eval "$(mise activate zsh)"
 
 # Work only
 # . /opt/homebrew/opt/asdf/libexec/asdf.sh

@@ -12,9 +12,9 @@
 
 # Personal only
 - shell:
-    - command: volta install node
+    - command: mise use --global node@latest
       description: Installing Node
-    - command: volta install yarn
+    - command: mise use --global yarn@latest
       description: Installing Yarn
     - command: npm adduser
       description: Adding NPM User
