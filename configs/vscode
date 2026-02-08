@@ -1,23 +1,43 @@
 {
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 12,
-  "editor.formatOnSave": true,
-  "editor.scrollBeyondLastLine": true,
-  "explorer.autoReveal": false,
-  "files.associations": {
-    "*.jsx": "javascript",
-    "*.tsx": "typescript"
-  },
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 98,
-  "terminal.external.osxExec": "iTerm.app",
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
-  "workbench.editor.enablePreview": false
+	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontSize": 12,
+	"editor.formatOnSave": true,
+	"editor.scrollBeyondLastLine": true,
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"explorer.autoReveal": false,
+	"files.associations": {
+		"*.jsx": "javascript",
+		"*.tsx": "typescript",
+		"*.css": "tailwindcss"
+	},
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 98,
+	"terminal.external.osxExec": "Hyper.app",
+	"window.zoomLevel": 0,
+	"workbench.colorTheme": "GitHub Dark Dimmed",
+	"totalTypeScript.hideAllTips": false,
+	"totalTypeScript.hideBasicTips": true,
+	"makefile.configureOnOpen": true,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"python": false
+	},
+	"claudeCode.selectedModel": "default",
+	"claudeCode.preferredLocation": "panel",
+	"workbench.editorAssociations": {
+		"*.copilotmd": "vscode.markdown.preview.editor",
+		".svg": "default",
+		"*.svg": "default"
+	}
 }

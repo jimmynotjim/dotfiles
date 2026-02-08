@@ -101,11 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gdstat="git diff --stat"
 
-
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Load mise (before setup scripts) in case it's the first time installing them
 eval "$(mise activate zsh)"
 
-# Work only
-# . /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH="/opt/homebrew/bin:$PATH"
