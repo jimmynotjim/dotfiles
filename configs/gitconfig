@@ -19,6 +19,7 @@
   default = simple
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
+	autoSetupRemote = true
 
 [merge]
   # Per @jferris: `ff = only` means Git will never implicitly do a merge

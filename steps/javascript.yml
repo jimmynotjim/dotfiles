@@ -7,29 +7,44 @@
       stdout: true
       stderr: true
 
-- link:
-    ~/.eslintrc: configs/eslintrc
-
 # Personal only
 - shell:
-    - command: volta install node
+    - command: |
+        # Remove Volta
+        if command -v volta > /dev/null 2>&1; then
+          echo "Removing Volta..."
+          brew uninstall volta 2>/dev/null || true
+          rm -rf ~/.volta
+          echo "✓ Volta removed"
+        fi
+        # Remove fnm
+        if command -v fnm > /dev/null 2>&1; then
+          echo "Removing fnm..."
+          brew uninstall fnm 2>/dev/null || true
+          rm -rf ~/.fnm
+          echo "✓ fnm removed"
+        fi
+        # Remove any global pnpm installations
+        if [ -d ~/.local/share/pnpm ]; then
+          echo "Removing global pnpm..."
+          rm -rf ~/.local/share/pnpm
+        fi
+        echo "✓ Cleanup complete"
+      description: Cleaning up old Node version managers
+    - command: mise use --global node@24
       description: Installing Node
-    - command: volta install yarn
-      description: Installing Yarn
-    - command: npm adduser
-      description: Adding NPM User
-    - command: yarn global add prettier
-      description: Installing Prettier
-    - command: yarn global add typescript
-      description: Installing Typescript
-
-# Work only
-# - shell: 
-#     - command: asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-#       description: Installing ASDF NodeJS plugin
-
-#     - command: asdf install nodejs latest:18
-#       description: Install Node 18 via ASDF
-
-#     - command: asdf global nodejs latest:18
-#       description: Set Node global to v18 via ASDF
+    - command: mise exec -- npm install -g corepack
+      description: Installing Corepack globally
+    - command: mise exec -- corepack enable
+      description: Enabling Corepack for package manager support
+    - command: |
+        if ! npm whoami > /dev/null 2>&1; then
+          echo ""
+          echo "⚠️  NPM Authentication Required"
+          echo "Run: npm login"
+          echo "This will open your browser for OAuth authentication."
+          echo ""
+        else
+          echo "✓ Already logged in to NPM as $(npm whoami)"
+        fi
+      description: Checking NPM authentication

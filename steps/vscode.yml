@@ -10,7 +10,7 @@
 - link:
     "~/Library/Application Support/Code/User/settings.json":
       if: "[ `uname` = Darwin ]"
-      path: vscode/settings.json
+      path: configs/vscode
 
 - shell:
     - command: bash -l './vscode/install.sh'

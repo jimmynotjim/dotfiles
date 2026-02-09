@@ -1,23 +1,53 @@
 {
-  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 12,
-  "editor.formatOnSave": true,
-  "editor.scrollBeyondLastLine": true,
-  "explorer.autoReveal": false,
-  "files.associations": {
-    "*.jsx": "javascript",
-    "*.tsx": "typescript"
-  },
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 98,
-  "terminal.external.osxExec": "iTerm.app",
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
-  "workbench.editor.enablePreview": false
+	"claudeCode.preferredLocation": "panel",
+	"claudeCode.selectedModel": "default",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontSize": 12,
+	"editor.formatOnSave": true,
+	"editor.minimap.enabled": false,
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"editor.rulers": [80, 120],
+	"editor.scrollBeyondLastLine": true,
+	"editor.tabSize": 2,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 98,
+	"explorer.autoReveal": false,
+	"files.associations": {
+		"*.css": "tailwindcss",
+		"*.jsx": "javascript",
+		"*.tsx": "typescript"
+	},
+	"files.exclude": {
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/node_modules": true
+	},
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"github.copilot.enable": {
+		"*": true,
+		"markdown": false,
+		"plaintext": false,
+		"python": false,
+		"scminput": false
+	},
+	"makefile.configureOnOpen": true,
+	"terminal.external.osxExec": "Hyper.app",
+	"terminal.integrated.fontSize": 14,
+	"totalTypeScript.hideAllTips": false,
+	"totalTypeScript.hideBasicTips": true,
+	"window.zoomLevel": 0,
+	"workbench.colorTheme": "GitHub Dark Dimmed",
+	"workbench.editorAssociations": {
+		"*.copilotmd": "vscode.markdown.preview.editor",
+		"*.svg": "default",
+		".svg": "default"
+	}
 }

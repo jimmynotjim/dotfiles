@@ -28,19 +28,20 @@ Apple limits terminal access to disk in macOS Mojave +, grant access or some of 
     $ cd ~/.dotfiles
     $ bash install
 
-## 4. Manual App Instalation
+**Note:** The install script will prompt you to authenticate with NPM. Run `npm login` in a new terminal when ready - it will open your browser for OAuth authentication.
+
+## 5. Manual App Installation
 
 Unfortunately some apps aren't available through Homebrew, so you need to install them **manually**.
 
 - [Adobe Suite](http://www.adobe.com/products/creativecloud.html) for image editing
 - [Hex Color Picker](http://wafflesoftware.net/hexpicker/) adds hex values to system picker
-- [Logi Options+](https://support.logi.com/hc/en-us/articles/4418699283607)
 
-## 5. iTerm 2 Settings
+## 6. iTerm 2 Settings
 
 The my personal iTerm Profile is installed during setup, but needs to be set as the default profile in iTerm > Settings > Profiles. I prefer to match the Github Dark Dimmed theme I already use in VSCode, luckily it's [available for iTerm 2](https://github.com/cdalvaro/github-vscode-theme-iterm).
 
-## 6. Countdown screensaver
+## 7. Countdown screensaver
 
 I started out using this screensaver to track how many days it had been since my office had closed for Covid, but before they could reopen I changed jobs, so it's a moo point now. Lately I've had it set to the day I transitioned from carpentry to tech as a reminder of how far I've come and how lucky I am.
 

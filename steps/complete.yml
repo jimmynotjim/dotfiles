@@ -11,6 +11,13 @@
     - command: |
         echo '
         ----------------------------------------------------------------
+        ✅ Installation complete!
+
+        To activate mise and use Node.js immediately, run:
+          exec zsh
+
+        Or simply open a new terminal window.
+        ----------------------------------------------------------------
         Follow the remaining instructions for manual setup in the README
         ----------------------------------------------------------------
         '
