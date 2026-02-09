@@ -1,23 +1,37 @@
 # code --list-extensions
 
-code --install-extension austenc.tailwind-docs
-code --install-extension bradlc.vscode-tailwindcss
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension eamodio.gitlens
-code --install-extension esbenp.prettier-vscode
-code --install-extension GitHub.github-vscode-theme
-code --install-extension github.vscode-github-actions
-code --install-extension GitHub.vscode-pull-request-github
-code --install-extension jock.svg
-code --install-extension mattpocock.ts-error-translator
-code --install-extension mgmcdermott.vscode-language-babel
-code --install-extension mohsen1.prettify-json
-code --install-extension mrmlnc.vscode-duplicate
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension unifiedjs.vscode-mdx
+CODE_BIN="/opt/homebrew/bin/code"
 
-# Work only extensions
+if [ ! -f "$CODE_BIN" ]; then
+  echo "VSCode not found at $CODE_BIN - skipping extension installation"
+  exit 0
+fi
 
-#code --install-extension biomejs.biome
-#code --install-extension github.copilot
-#code --install-extension github.copilot-chat
+"$CODE_BIN" --install-extension anthropic.claude-code
+"$CODE_BIN" --install-extension astro-build.astro-vscode
+"$CODE_BIN" --install-extension austenc.tailwind-docs
+"$CODE_BIN" --install-extension biomejs.biome
+"$CODE_BIN" --install-extension bradlc.vscode-tailwindcss
+"$CODE_BIN" --install-extension charliermarsh.ruff
+"$CODE_BIN" --install-extension dbaeumer.vscode-eslint
+"$CODE_BIN" --install-extension editorconfig.editorconfig
+"$CODE_BIN" --install-extension esbenp.prettier-vscode
+"$CODE_BIN" --install-extension GitHub.github-vscode-theme
+"$CODE_BIN" --install-extension github.vscode-github-actions
+"$CODE_BIN" --install-extension GitHub.vscode-pull-request-github
+"$CODE_BIN" --install-extension jock.svg
+"$CODE_BIN" --install-extension mattpocock.ts-error-translator
+"$CODE_BIN" --install-extension mgmcdermott.vscode-language-babel
+"$CODE_BIN" --install-extension mohsen1.prettify-json
+"$CODE_BIN" --install-extension mrmlnc.vscode-duplicate
+"$CODE_BIN" --install-extension ms-azuretools.vscode-containers
+"$CODE_BIN" --install-extension ms-azuretools.vscode-docker
+"$CODE_BIN" --install-extension ms-vscode-remote.remote-containers
+"$CODE_BIN" --install-extension ms-vscode-remote.remote-ssh
+"$CODE_BIN" --install-extension ms-vscode-remote.remote-ssh-edit
+"$CODE_BIN" --install-extension ms-vscode.makefile-tools
+"$CODE_BIN" --install-extension ms-vscode.remote-explorer
+"$CODE_BIN" --install-extension swiftlang.swift-vscode
+"$CODE_BIN" --install-extension tamasfe.even-better-toml
+"$CODE_BIN" --install-extension unifiedjs.vscode-mdx
+"$CODE_BIN" --install-extension usernamehw.errorlens

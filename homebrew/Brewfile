@@ -7,10 +7,14 @@
 # Development
 #
 
+brew 'ffmpeg'
 brew 'git'
 brew 'git-extras'
 brew 'gh'
 brew 'mise'
+brew 'swiftlint'
+brew 'uv'
+brew 'yt-dlp'
 ## Work only
 #brew 'asdf'
 #brew gpg
@@ -61,6 +65,9 @@ cask 'iterm2'
 
 #https://code.visualstudio.com
 cask 'visual-studio-code'
+
+#https://www.docker.com/products/docker-desktop
+cask 'docker-desktop'
 
 
 #

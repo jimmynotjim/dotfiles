@@ -1,43 +1,53 @@
 {
+	"claudeCode.preferredLocation": "panel",
+	"claudeCode.selectedModel": "default",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
 	"editor.fontSize": 12,
 	"editor.formatOnSave": true,
-	"editor.scrollBeyondLastLine": true,
+	"editor.minimap.enabled": false,
 	"editor.quickSuggestions": {
 		"strings": "on"
 	},
+	"editor.rulers": [80, 120],
+	"editor.scrollBeyondLastLine": true,
+	"editor.tabSize": 2,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 98,
 	"explorer.autoReveal": false,
 	"files.associations": {
+		"*.css": "tailwindcss",
 		"*.jsx": "javascript",
-		"*.tsx": "typescript",
-		"*.css": "tailwindcss"
+		"*.tsx": "typescript"
+	},
+	"files.exclude": {
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/node_modules": true
 	},
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
-	},
-	"editor.wordWrap": "wordWrapColumn",
-	"editor.wordWrapColumn": 98,
-	"terminal.external.osxExec": "Hyper.app",
-	"window.zoomLevel": 0,
-	"workbench.colorTheme": "GitHub Dark Dimmed",
-	"totalTypeScript.hideAllTips": false,
-	"totalTypeScript.hideBasicTips": true,
-	"makefile.configureOnOpen": true,
 	"github.copilot.enable": {
 		"*": true,
-		"plaintext": false,
 		"markdown": false,
-		"scminput": false,
-		"python": false
+		"plaintext": false,
+		"python": false,
+		"scminput": false
 	},
-	"claudeCode.selectedModel": "default",
-	"claudeCode.preferredLocation": "panel",
+	"makefile.configureOnOpen": true,
+	"terminal.external.osxExec": "Hyper.app",
+	"terminal.integrated.fontSize": 14,
+	"totalTypeScript.hideAllTips": false,
+	"totalTypeScript.hideBasicTips": true,
+	"window.zoomLevel": 0,
+	"workbench.colorTheme": "GitHub Dark Dimmed",
 	"workbench.editorAssociations": {
 		"*.copilotmd": "vscode.markdown.preview.editor",
-		".svg": "default",
-		"*.svg": "default"
+		"*.svg": "default",
+		".svg": "default"
 	}
 }
