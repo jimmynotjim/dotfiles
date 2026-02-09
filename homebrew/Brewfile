@@ -16,7 +16,6 @@ brew 'swiftlint'
 brew 'uv'
 brew 'yt-dlp'
 ## Work only
-#brew 'asdf'
 #brew gpg
 #brew gawk
 #brew pnpm
@@ -48,9 +47,6 @@ cask_args appdir: '/Applications'
 
 #http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html
 cask 'superduper'
-
-#https://www.expressvpn.com
-cask 'expressvpn'
 
 
 #
@@ -109,6 +105,18 @@ cask 'stellarium'
 #https://www.coconut-flavour.com/coconutbattery/
 cask 'coconutbattery'
 
+#https://www.notion.so
+cask 'notion'
+
+#https://claude.ai
+cask 'claude'
+
+#https://discord.com
+cask 'discord'
+
+#https://www.logitech.com/en-us/software/logi-options-plus.html
+cask 'logi-options+'
+
 
 #
 # Mac App Store
@@ -124,5 +132,8 @@ mas 'Patterns', id: 429449079
 mas 'Pixelmator', id: 407963104
 mas 'Poolsuite FM', id: 1514817810
 mas 'Shush', id: 496437906
+mas 'Sim Daltonism', id: 693112260
 mas 'Slack', id: 803453959
+mas 'Sleeve', id: 1606145041
 mas 'Spark', id: 1176895641
+mas 'Todoist', id: 585829637

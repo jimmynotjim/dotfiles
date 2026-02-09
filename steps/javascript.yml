@@ -7,9 +7,6 @@
       stdout: true
       stderr: true
 
-- link:
-    ~/.eslintrc: configs/eslintrc
-
 # Personal only
 - shell:
     - command: mise use --global node@latest
