@@ -9,9 +9,33 @@
 
 # Personal only
 - shell:
-    - command: mise use --global node@latest
+    - command: |
+        # Remove Volta
+        if command -v volta > /dev/null 2>&1; then
+          echo "Removing Volta..."
+          brew uninstall volta 2>/dev/null || true
+          rm -rf ~/.volta
+          echo "✓ Volta removed"
+        fi
+        # Remove fnm
+        if command -v fnm > /dev/null 2>&1; then
+          echo "Removing fnm..."
+          brew uninstall fnm 2>/dev/null || true
+          rm -rf ~/.fnm
+          echo "✓ fnm removed"
+        fi
+        # Remove any global pnpm installations
+        if [ -d ~/.local/share/pnpm ]; then
+          echo "Removing global pnpm..."
+          rm -rf ~/.local/share/pnpm
+        fi
+        echo "✓ Cleanup complete"
+      description: Cleaning up old Node version managers
+    - command: mise use --global node@24
       description: Installing Node
-    - command: corepack enable
+    - command: mise exec -- npm install -g corepack
+      description: Installing Corepack globally
+    - command: mise exec -- corepack enable
       description: Enabling Corepack for package manager support
     - command: |
         if ! npm whoami > /dev/null 2>&1; then

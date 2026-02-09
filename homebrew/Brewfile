@@ -65,6 +65,9 @@ cask 'visual-studio-code'
 #https://www.docker.com/products/docker-desktop
 cask 'docker-desktop'
 
+#https://claude.ai/download
+cask 'claude-code'
+
 
 #
 # Browsers
