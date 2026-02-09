@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # vim: tw=0
 
 # Useful tips from: https://github.com/mathiasbynens/dotfiles/blob/main/.macos
@@ -70,7 +70,11 @@ defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock largesize -int 65
 
 # Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
+if [ -d "/Applications/Xcode.app" ]; then
+  sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
+else
+  echo "Xcode not installed yet - skipping Simulator symlink"
+fi
 #sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
 
 # Display full POSIX path as Finder window title
@@ -96,9 +100,6 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool false
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-# Make ⌘ + F focus the search input in iTunes
-defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 # Do not restore previously-opened windows in Preview
 # https://apple.stackexchange.com/questions/54854/is-there-a-way-to-make-preview-not-open-all-previously-opened-files

@@ -1,9 +1,11 @@
+#!/usr/bin/env bash
+
 # code --list-extensions
 
-CODE_BIN="/opt/homebrew/bin/code"
+CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
 if [ ! -f "$CODE_BIN" ]; then
-  echo "VSCode not found at $CODE_BIN - skipping extension installation"
+  echo "VSCode not found - skipping extension installation"
   exit 0
 fi
 

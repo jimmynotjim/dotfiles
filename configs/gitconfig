@@ -9,7 +9,7 @@
   user = jimmynotjim
 
 [core]
-  editor = vim
+  editor = code --wait
   whitespace = trailing-space,cr-at-eol
   excludesfile = ~/.gitignore
   autocrlf = false
@@ -19,7 +19,7 @@
   default = simple
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
-	autoSetupRemote = true
+  autoSetupRemote = true
 
 [merge]
   # Per @jferris: `ff = only` means Git will never implicitly do a merge

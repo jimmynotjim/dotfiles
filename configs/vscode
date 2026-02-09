@@ -31,22 +31,13 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
-	"github.copilot.enable": {
-		"*": true,
-		"markdown": false,
-		"plaintext": false,
-		"python": false,
-		"scminput": false
-	},
 	"makefile.configureOnOpen": true,
-	"terminal.external.osxExec": "Hyper.app",
 	"terminal.integrated.fontSize": 14,
 	"totalTypeScript.hideAllTips": false,
 	"totalTypeScript.hideBasicTips": true,
 	"window.zoomLevel": 0,
 	"workbench.colorTheme": "GitHub Dark Dimmed",
 	"workbench.editorAssociations": {
-		"*.copilotmd": "vscode.markdown.preview.editor",
 		"*.svg": "default",
 		".svg": "default"
 	}
