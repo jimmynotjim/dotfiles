@@ -60,7 +60,7 @@ defaults write com.apple.dock orientation -string left
 # Set the Dock size
 defaults write com.apple.dock tilesize -int 34
 
-# Autohide the Dock 
+# Autohide the Dock
 defaults write com.apple.dock autohide -bool true
 
 # Set Dock to magnify
@@ -68,14 +68,6 @@ defaults write com.apple.dock magnification -bool true
 
 # Set Dock magnification size
 defaults write com.apple.dock largesize -int 65
-
-# Add iOS & Watch Simulator to Launchpad
-if [ -d "/Applications/Xcode.app" ]; then
-  sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-else
-  echo "Xcode not installed yet - skipping Simulator symlink"
-fi
-#sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
 
 # Display full POSIX path as Finder window title
 #defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
