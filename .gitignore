@@ -5,3 +5,5 @@
 Desktop.ini
 Thumbs.db
 Brewfile.lock.json
+install.log
+.mypy_cache/

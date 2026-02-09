@@ -14,19 +14,26 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
+readonly LOGFILE="$BASEDIR/install.log"
+: > "$LOGFILE"
+
 run_dotbot () {
   local config
   config="$1"
 
-  "$BASEDIR/$DOTBOT_DIR/$DOTBOT_BIN" \
+  echo "Running $config..." | tee -a "$LOGFILE"
+  if ! "$BASEDIR/$DOTBOT_DIR/$DOTBOT_BIN" \
     -d "$BASEDIR" \
     --plugin-dir dotbot-brewfile \
-    -c "$config" $ARGS
+    -c "$config" $ARGS 2>&1 | tee -a "$LOGFILE"; then
+    echo "ERROR: $config failed. See $LOGFILE for details." | tee -a "$LOGFILE"
+    exit 1
+  fi
 }
 
-run_dotbot 'steps/macos.yml' || true
-run_dotbot 'steps/homebrew.yml' || true
-run_dotbot 'steps/iterm.yml' || true
-run_dotbot 'steps/vscode.yml' || true
-run_dotbot 'steps/javascript.yml' || true
-run_dotbot 'steps/complete.yml' || true
+run_dotbot 'steps/macos.yml'
+run_dotbot 'steps/homebrew.yml'
+run_dotbot 'steps/iterm.yml'
+run_dotbot 'steps/vscode.yml'
+run_dotbot 'steps/javascript.yml'
+run_dotbot 'steps/complete.yml'

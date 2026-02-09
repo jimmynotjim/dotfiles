@@ -31,7 +31,7 @@
         fi
         echo "✓ Cleanup complete"
       description: Cleaning up old Node version managers
-    - command: mise use --global node@24
+    - command: mise use --global node@lts
       description: Installing Node
     - command: mise exec -- npm install -g corepack
       description: Installing Corepack globally

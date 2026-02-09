@@ -427,7 +427,7 @@
         "Alpha Component" : 1,
         "Green Component" : 0.55789834260940552
       },
-      "Dynamic Profile Filename" : "\/Users\/jimmy.wilson\/Library\/Application Support\/iTerm2\/DynamicProfiles\/my-profile.json",
+      "Dynamic Profile Filename" : "",
       "Description" : "My Profile",
       "Match Background Color" : {
         "Red Component" : 0.58823531866073608,
@@ -584,7 +584,7 @@
         "editor" : "com.microsoft.VSCode"
       },
       "Custom Directory" : "No",
-      "Working Directory" : "\/Users\/jimmy.wilson",
+      "Working Directory" : "~",
       "ASCII Anti Aliased" : true,
       "Shortcut" : "",
       "Mouse Reporting" : true,
