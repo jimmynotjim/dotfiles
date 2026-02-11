@@ -36,6 +36,8 @@ Unfortunately some apps aren't available through Homebrew, so you need to instal
 
 - [Adobe Suite](http://www.adobe.com/products/creativecloud.html) for image editing
 - [Hex Color Picker](http://wafflesoftware.net/hexpicker/) adds hex values to system picker
+- [UGreen NAS Client](https://www.ugnas.com/download/)
+- [Ratio](https://ratioapp.markwyner.com)
 
 ## 6. iTerm 2 Settings
 
