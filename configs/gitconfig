@@ -92,5 +92,8 @@
   #untracked = cyan
   #branch = magenta
 
+[pager]
+  branch = false
+
 [init]
   defaultBranch = main

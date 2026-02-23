@@ -45,6 +45,9 @@ yarn-error.log*
 *.temp
 .~*
 
+# Claude Code
+PLAN-*.md
+
 # Security sensitive
 .ssh/
 .env

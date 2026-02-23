@@ -1,0 +1,12 @@
+# Personal Claude Preferences
+
+## Planning Preferences
+
+When entering plan mode (via EnterPlanMode or at user request), always write the plan to a markdown file in the **repo root** of the current project (not `~/.claude/plans/` or any global location).
+
+- Use a descriptive filename with the `PLAN-` prefix, e.g.:
+  - `PLAN-auth-refactor.md`
+  - `PLAN-hourly-chart-redesign.md`
+- The `PLAN-` prefix makes plans easy to find and easy to add to `.gitignore`
+- Write the full plan content to that file
+- Then call `ExitPlanMode` to present the plan and ask for approval as usual

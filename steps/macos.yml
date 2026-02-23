@@ -50,6 +50,8 @@
     ~/.zshrc: configs/zshrc
     ~/.zprofile: configs/zprofile
     ~/.ssh/config: configs/ssh_config
+    ~/.claude/claude.md: configs/claude_doc
+    ~/.claude/settings.json: configs/claude_settings
 
 - shell:
     - command: bash -l './macos/install.sh'
