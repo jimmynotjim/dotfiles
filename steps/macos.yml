@@ -2,6 +2,7 @@
     link:
       relink: true
       create: true
+      force: true
     shell:
       quiet: true
       stdout: true
@@ -43,6 +44,16 @@
     - ~/Desktop/screenshots
     - ~/repos/work
     - ~/repos/personal
+
+- shell:
+    - command: |
+        for f in ~/.gitconfig ~/.gitignore ~/.zshrc ~/.zprofile ~/.ssh/config ~/.claude/claude.md ~/.claude/settings.json; do
+          if [ -f "$f" ] && [ ! -L "$f" ]; then
+            cp "$f" "${f}.bak"
+            echo "Backed up $f -> ${f}.bak"
+          fi
+        done
+      description: Backing up existing config files
 
 - link:
     ~/.gitconfig: configs/gitconfig
