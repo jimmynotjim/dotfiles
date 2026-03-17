@@ -15,8 +15,8 @@ cd "${BASEDIR}"
 # Cache sudo credentials upfront so non-interactive steps (e.g. Homebrew install) don't hang
 sudo -v
 
-git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive "${DOTBOT_DIR}"
+git submodule sync --quiet --recursive
+git submodule update --init --recursive
 
 readonly LOGFILE="$BASEDIR/install.log"
 : > "$LOGFILE"
