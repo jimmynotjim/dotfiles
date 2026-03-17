@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -eo pipefail
 
 CONFIG="install.conf.yaml"
 
@@ -32,7 +32,13 @@ run_dotbot () {
 }
 
 run_dotbot 'steps/macos.yml'
-run_dotbot 'steps/homebrew.yml'
+run_dotbot 'steps/homebrew-install.yml'
+
+# Add Homebrew to PATH before installing packages (needed on Apple Silicon)
+[[ -f "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -f "/usr/local/bin/brew" ]] && eval "$(/usr/local/bin/brew shellenv)"
+
+run_dotbot 'steps/homebrew-packages.yml'
 run_dotbot 'steps/iterm.yml'
 run_dotbot 'steps/vscode.yml'
 run_dotbot 'steps/javascript.yml'

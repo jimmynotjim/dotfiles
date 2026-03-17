@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+    shell:
+      quiet: true
+      stdout: true
+      stderr: true
+
+- brewfile:
+    file: ./homebrew/Brewfile
+    no-upgrade: true
+    stdout: true
+    stderr: true
+    include: ["tap", "brew", "cask", "mas"]
