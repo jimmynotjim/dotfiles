@@ -1,6 +1,6 @@
 {
   "claudeCode.preferredLocation": "panel",
-  "claudeCode.selectedModel": "claude-opus-4-6",
+  "claudeCode.selectedModel": "default",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },

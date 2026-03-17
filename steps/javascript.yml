@@ -35,6 +35,8 @@
       description: Installing Node
     - command: mise exec -- npm install -g corepack
       description: Installing Corepack globally
+    - command: mise exec -- npm install -g typescript typescript-language-server
+      description: Installing global npm packages (before corepack shims)
     - command: mise exec -- corepack enable
       description: Enabling Corepack for package manager support
     - command: |
