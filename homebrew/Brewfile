@@ -132,14 +132,14 @@ cask 'logi-options+'
 mas 'Xcode', id: 497799835
 mas '1Password7', id: 1333542190
 mas 'Bear', id: 1091189122
-mas 'DaisyDisk', id: 411643860
+#mas 'DaisyDisk', id: 411643860
 mas 'Darkroom', id: 953286746
 mas 'Fantastical', id: 975937182
 mas 'iA Writer', id: 775737590
-mas 'Patterns', id: 429449079
-mas 'Pixelmator', id: 407963104
+#mas 'Patterns', id: 429449079
+#mas 'Pixelmator', id: 407963104
 mas 'Poolsuite FM', id: 1514817810
-mas 'Shush', id: 496437906
+#mas 'Shush', id: 496437906
 mas 'Sim Daltonism', id: 693112260
 mas 'Slack', id: 803453959
 mas 'Sleeve', id: 1606145041
