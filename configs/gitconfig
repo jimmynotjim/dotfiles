@@ -97,3 +97,11 @@
 
 [init]
   defaultBranch = main
+
+# If the repo is inside the ~/repos/work/ folder, use the work config
+[includeIf "gitdir:~/repos/work/"]
+    path = ~/.gitconfig-work
+
+# If the repo is inside the ~/repos/personal/ folder, use the personal config
+[includeIf "gitdir:~/repos/personal/"]
+    path = ~/.gitconfig-personal
