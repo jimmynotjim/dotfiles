@@ -14,7 +14,7 @@ bash install
 
 This sequentially runs dotbot against each step config in `steps/`:
 
-1. `macos.yml` — Xcode CLT, Oh-My-Zsh + plugins, directory creation, symlinks, macOS defaults
+1. `macos.yml` — Xcode CLT, Oh-My-Zsh + plugins, directory creation, symlinks, macOS defaults. Creates `~/.zshrc` as a real file (not a symlink) that sources `configs/zshrc` and `~/.zshrc.local`.
 2. `homebrew.yml` — Homebrew installation + all packages from `homebrew/Brewfile`
 3. `iterm.yml` — iTerm2 dynamic profile symlink
 4. `vscode.yml` — VSCode settings symlink + extension installation via `vscode/install.sh`
@@ -31,7 +31,6 @@ To run a single step:
 
 ### Symlinks (managed by dotbot `link` directives)
 
-- `configs/zshrc` → `~/.zshrc`
 - `configs/zprofile` → `~/.zprofile`
 - `configs/gitconfig` → `~/.gitconfig`
 - `configs/gitignore` → `~/.gitignore`

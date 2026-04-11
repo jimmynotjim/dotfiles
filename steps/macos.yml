@@ -58,12 +58,29 @@
 - link:
     ~/.gitconfig: configs/gitconfig
     ~/.gitignore: configs/gitignore
-    ~/.zshrc: configs/zshrc
     ~/.zprofile: configs/zprofile
     ~/.ssh/config: configs/ssh_config
     ~/.claude/claude.md: configs/claude_doc
     ~/.claude/settings.json: configs/claude_settings
 
 - shell:
+    - command: |
+        DOTFILES_ZSHRC="$(pwd)/configs/zshrc"
+        SOURCE_LINE="source $DOTFILES_ZSHRC"
+        LOCAL_LINE='[ -f ~/.zshrc.local ] && source ~/.zshrc.local'
+
+        if [ -L ~/.zshrc ]; then
+          rm ~/.zshrc
+          printf '%s\n%s\n' "$SOURCE_LINE" "$LOCAL_LINE" > ~/.zshrc
+          echo "Replaced symlink ~/.zshrc with sourcing stub"
+        elif [ ! -f ~/.zshrc ]; then
+          printf '%s\n%s\n' "$SOURCE_LINE" "$LOCAL_LINE" > ~/.zshrc
+          echo "Created ~/.zshrc sourcing stub"
+        else
+          grep -qxF "$SOURCE_LINE" ~/.zshrc || echo "$SOURCE_LINE" >> ~/.zshrc
+          grep -qxF "$LOCAL_LINE" ~/.zshrc || echo "$LOCAL_LINE" >> ~/.zshrc
+          echo "~/.zshrc exists, ensured required lines present"
+        fi
+      description: Creating ~/.zshrc sourcing stub
     - command: bash -l './macos/install.sh'
       description: Installing macos system preferences
