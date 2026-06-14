@@ -15,7 +15,6 @@
     "deny": [],
     "ask": []
   },
-  "model": "opusplan",
   "enabledPlugins": {
     "claude-code-setup@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
@@ -31,7 +30,17 @@
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "notion-ea@jimmy-claude-plugins": true
   },
-  "ENABLE_LSP_TOOL": "1"
+  "extraKnownMarketplaces": {
+    "jimmy-claude-plugins": {
+      "source": {
+        "source": "git",
+        "url": "git@github.com:jimmynotjim/claude-plugins.git"
+      }
+    }
+  },
+  "ENABLE_LSP_TOOL": "1",
+  "skipAutoPermissionPrompt": true
 }
