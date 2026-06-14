@@ -6,6 +6,10 @@
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Use overlay scrollbars (transparent track, thumb auto-hides until you scroll)
+# instead of the always-on legacy gray track
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
 
