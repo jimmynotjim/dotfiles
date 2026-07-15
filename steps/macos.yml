@@ -47,7 +47,7 @@
 
 - shell:
     - command: |
-        for f in ~/.gitconfig ~/.gitignore ~/.zshrc ~/.zprofile ~/.ssh/config ~/.claude/claude.md ~/.claude/settings.json; do
+        for f in ~/.gitconfig ~/.gitignore ~/.zshrc ~/.zprofile ~/.ssh/config ~/.claude/claude.md ~/.claude/settings.json ~/.claude/statusline-command.sh; do
           if [ -f "$f" ] && [ ! -L "$f" ]; then
             cp "$f" "${f}.bak"
             echo "Backed up $f -> ${f}.bak"
@@ -62,6 +62,7 @@
     ~/.ssh/config: configs/ssh_config
     ~/.claude/claude.md: configs/claude_doc
     ~/.claude/settings.json: configs/claude_settings
+    ~/.claude/statusline-command.sh: configs/claude_statusline
 
 - shell:
     - command: |

@@ -37,6 +37,7 @@ To run a single step:
 - `configs/ssh_config` → `~/.ssh/config`
 - `configs/claude_doc` → `~/.claude/claude.md`
 - `configs/claude_settings` → `~/.claude/settings.json`
+- `configs/claude_statusline` → `~/.claude/statusline-command.sh` (referenced by the `statusLine` block in `configs/claude_settings`; requires `jq`)
 - `configs/vscode` → `~/Library/Application Support/Code/User/settings.json`
 - `configs/iterm` → `~/Library/Application Support/iTerm2/DynamicProfiles/my-profile.json`
 

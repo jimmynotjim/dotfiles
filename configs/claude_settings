@@ -10,10 +10,17 @@
       "Bash(plutil:*)",
       "Bash(swiftlint lint:*)",
       "Bash(xcodebuild:*)",
-      "mcp__pencil"
+      "mcp__pencil",
+      "mcp__claude_ai_Notion__notion-create-comment",
+      "mcp__claude_ai_Notion__notion-update-page"
     ],
     "deny": [],
     "ask": []
+  },
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "claude-code-setup@claude-plugins-official": true,
@@ -24,14 +31,16 @@
     "context7@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "figma@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
     "plugin-dev@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "notion-ea@jimmy-claude-plugins": true
+    "notion-ea@jimmy-claude-plugins": true,
+    "fire-risk-data@jimmy-claude-plugins": true,
+    "fire-risk-ea@jimmy-claude-plugins": true,
+    "fire-risk-development@jimmy-claude-plugins": true
   },
   "extraKnownMarketplaces": {
     "jimmy-claude-plugins": {
@@ -41,6 +50,12 @@
       }
     }
   },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "theme": "dark",
+  "skipAutoPermissionPrompt": true,
+  "defaultMode": "auto",
   "ENABLE_LSP_TOOL": "1",
-  "skipAutoPermissionPrompt": true
+  "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
 }
