@@ -15,7 +15,8 @@
       "mcp__claude_ai_Notion__notion-update-page"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "defaultMode": "auto"
   },
   "model": "opus",
   "statusLine": {
@@ -37,8 +38,7 @@
     "superpowers@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "notion-ea@jimmy-claude-plugins": true,
-    "fire-risk-data@jimmy-claude-plugins": true,
+    "school-ea@jimmy-claude-plugins": true,
     "fire-risk-ea@jimmy-claude-plugins": true,
     "fire-risk-development@jimmy-claude-plugins": true
   },
@@ -55,7 +55,6 @@
   "skipWorkflowUsageWarning": true,
   "theme": "dark",
   "skipAutoPermissionPrompt": true,
-  "defaultMode": "auto",
   "ENABLE_LSP_TOOL": "1",
   "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
 }
