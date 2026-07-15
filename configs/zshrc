@@ -25,6 +25,9 @@ alias gdstat="git diff --stat"
 # Load mise (before setup scripts) in case it's the first time installing them
 eval "$(mise activate zsh)"
 
-# Local overrides (not tracked in git)
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 export PATH="$HOME/.local/bin:$PATH"
+
+# Machine-local overrides live in ~/.zshrc.local and are sourced by the ~/.zshrc
+# stub *after* this file (see steps/macos.yml), so they land last and win.
+# Don't source them here: anything added below that point would override the
+# overrides, which is exactly what this file is not for.
