@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# Claude Code statusLine command
+# Mirrors the robbyrussell Oh-My-Zsh theme style
+
+input=$(cat)
+
+cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // empty')
+dir=$(basename "$cwd")
+
+model=$(echo "$input" | jq -r '.model.display_name // empty')
+
+# Pick the color for a usage percentage: green < 50, orange 50-79, red >= 80.
+pct_color() {
+  if [ "$1" -ge 80 ]; then
+    printf '\033[31m'        # red
+  elif [ "$1" -ge 50 ]; then
+    printf '\033[38;5;208m'  # orange
+  else
+    printf '\033[32m'        # green
+  fi
+}
+
+# Colorize a usage percentage as it fills.
+# Echoes the rounded "N%" wrapped in the appropriate ANSI color.
+colorize_pct() {
+  local n
+  n=$(printf '%.0f' "$1")
+  printf '%s%s%%\033[0m' "$(pct_color "$n")" "$n"
+}
+
+used=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
+if [ -n "$used" ]; then
+  ctx_part=" | ctx:$(colorize_pct "$used")"
+else
+  ctx_part=""
+fi
+
+# Current session (5-hour rolling window) usage. Pro/Max only; absent until
+# the first API response, so render nothing when missing.
+session=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')
+if [ -n "$session" ]; then
+  session_part=" | session:$(colorize_pct "$session")"
+
+  # Show time-till-reset once usage is in the orange (>= 50%) — below that it's noise.
+  session_n=$(printf '%.0f' "$session")
+  if [ "$session_n" -ge 50 ]; then
+    resets_at=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
+    if [ -n "$resets_at" ]; then
+      remaining=$(( resets_at - $(date +%s) ))
+      if [ "$remaining" -gt 0 ]; then
+        h=$(( remaining / 3600 ))
+        m=$(( (remaining % 3600) / 60 ))
+        if [ "$h" -gt 0 ]; then
+          reset_str="${h}h${m}m"
+        else
+          reset_str="${m}m"
+        fi
+        session_part="${session_part} $(pct_color "$session_n")(resets in ${reset_str})$(printf '\033[0m')"
+      fi
+    fi
+  fi
+else
+  session_part=""
+fi
+
+# Git branch (skip optional locks for safety)
+if git_branch=$(GIT_OPTIONAL_LOCKS=0 git -C "$cwd" symbolic-ref --short HEAD 2>/dev/null); then
+  git_part=" git:($(printf '\033[31m')${git_branch}$(printf '\033[0m'))"
+else
+  git_part=""
+fi
+
+printf '\033[32m➜\033[0m  \033[36m%s\033[0m%s%s%s%s' \
+  "$dir" \
+  "$git_part" \
+  "${model:+ | $model}" \
+  "$ctx_part" \
+  "$session_part"
