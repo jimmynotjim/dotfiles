@@ -9,20 +9,23 @@ dir=$(basename "$cwd")
 
 model=$(echo "$input" | jq -r '.model.display_name // empty')
 
-# Colorize a usage percentage as it fills: green < 50, orange 50-79, red >= 80.
+# Pick the color for a usage percentage: green < 50, orange 50-79, red >= 80.
+pct_color() {
+  if [ "$1" -ge 80 ]; then
+    printf '\033[31m'        # red
+  elif [ "$1" -ge 50 ]; then
+    printf '\033[38;5;208m'  # orange
+  else
+    printf '\033[32m'        # green
+  fi
+}
+
+# Colorize a usage percentage as it fills.
 # Echoes the rounded "N%" wrapped in the appropriate ANSI color.
 colorize_pct() {
   local n
   n=$(printf '%.0f' "$1")
-  local color
-  if [ "$n" -ge 80 ]; then
-    color='\033[31m'        # red
-  elif [ "$n" -ge 50 ]; then
-    color='\033[38;5;208m'  # orange
-  else
-    color='\033[32m'        # green
-  fi
-  printf '%b%s%%\033[0m' "$color" "$n"
+  printf '%s%s%%\033[0m' "$(pct_color "$n")" "$n"
 }
 
 used=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
@@ -38,9 +41,9 @@ session=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty
 if [ -n "$session" ]; then
   session_part=" | session:$(colorize_pct "$session")"
 
-  # Only show time-till-reset when in the red (>= 80%) — otherwise it's noise.
+  # Show time-till-reset once usage is in the orange (>= 50%) — below that it's noise.
   session_n=$(printf '%.0f' "$session")
-  if [ "$session_n" -ge 80 ]; then
+  if [ "$session_n" -ge 50 ]; then
     resets_at=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
     if [ -n "$resets_at" ]; then
       remaining=$(( resets_at - $(date +%s) ))
@@ -52,7 +55,7 @@ if [ -n "$session" ]; then
         else
           reset_str="${m}m"
         fi
-        session_part="${session_part} $(printf '\033[31m')(resets in ${reset_str})$(printf '\033[0m')"
+        session_part="${session_part} $(pct_color "$session_n")(resets in ${reset_str})$(printf '\033[0m')"
       fi
     fi
   fi
